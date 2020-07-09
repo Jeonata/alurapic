@@ -5,7 +5,10 @@ import { RouterModule } from '@angular/router';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RequestInterceptor } from './auth/request.interceptor';
 import { FooterComponent } from './footer/footer.component';
-import { AlertModule } from '../shared/alert/alert.module';
+import { AlertModule } from '../shared/components/alert/alert.module';
+import { LoadingModule } from '../shared/components/loading/loading.module';
+import { MenuModule } from '../shared/components/menu/menu.module';
+import { ShowIfLoggedoModule } from '../shared/directives/show-if-logged/show-if-logged.module';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { AlertModule } from '../shared/alert/alert.module';
   imports: [
     CommonModule,
     RouterModule,
-    AlertModule
+    AlertModule,
+    LoadingModule,
+    MenuModule,
+    ShowIfLoggedoModule
   ],
   providers: [
     {
